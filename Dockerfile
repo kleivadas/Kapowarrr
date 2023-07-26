@@ -3,10 +3,10 @@
 FROM python:3.8-slim-buster
 STOPSIGNAL SIGINT
 
-ARG USER=kapowarr
+ARG USER=apps
 
-ENV PUID 1000
-ENV PGID 1000
+ENV PUID 568
+ENV PGID 568
 
 RUN groupadd -g $PGID -o $USER && \
 useradd -m -N -u $PUID -g $PGID $USER && \
